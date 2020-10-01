@@ -1,0 +1,20 @@
+<div class="header">
+    <div class="header_top">
+        <div class="wrap">
+            <div class="logo">
+            <%= link_to new_home_path do %>
+                <%= image_tag "logo.png" %>
+            <% end %>
+            </div>
+             <div class="menu">
+                <ul><li class="active"><%= link_to 'Home', root_path %></li>
+                    <li><%= link_to 'Projetos', projetos_index_path %></li>
+                    <li><%= link_to 'Artigos', artigos_index_path %></li>
+                    <li><%= link_to 'Contato', new_contato_path %></li>
+                    <div class="clear"></div>
+                </ul>
+            </div>
+            <div class="clear"></div>
+       </div>
+    </div>
+</div>

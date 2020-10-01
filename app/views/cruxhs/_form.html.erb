@@ -1,0 +1,21 @@
+<%= form_for(@cruxh) do |f| %>
+  <% if @cruxh.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@cruxh.errors.count, "error") %> prohibited this cruxh from being saved:</h2>
+
+      <ul>
+      <% @cruxh.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

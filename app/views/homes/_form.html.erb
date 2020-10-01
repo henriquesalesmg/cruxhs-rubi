@@ -1,0 +1,38 @@
+<%= form_for(@home) do |f| %>
+  <% if @home.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@home.errors.count, "error") %> prohibited this home from being saved:</h2>
+
+      <ul>
+      <% @home.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="login_form">
+    <%= f.label :nome %><br>
+    <%= f.text_field :nome, class:"textbox", placeholder: "Nome completo" %>
+  </div>
+  <div class="login_form">
+    <%= f.label :email %><br>
+    <%= f.text_field :email, class:"textbox" %>
+  </div>
+  <div class="login_form">
+    <%= f.label :telefone, 'Celular' %><br>
+    <%= f.text_field :telefone, class:"textbox", placeholder: "(wpp se possível)" %>
+  </div>
+  <div class="login_form">
+    <%= f.label :pedido %><br>
+    <%= f.select :pedido, ['Informação', 'WebSite', 'Sistemas Diversos', 'Aplicativo', 'Propagandas', 'Imagem/Criação', 'Video', 'Desenvolvimento', 'Documentação para MEI', 'Outros'], class:"styled-select black rounded" %>
+  </div>
+  <div class="login_form">
+    <%= f.label :mensagem %><br>
+    <%= f.text_area :mensagem, class:"textbox" %>
+  </div><br><br>
+    <div>
+     <%= f.submit 'Enviar', :class => 'submit_button2', data: {confirm: "Confirma as informações sr(a)?"} %>
+    </div>
+<% end %>
+

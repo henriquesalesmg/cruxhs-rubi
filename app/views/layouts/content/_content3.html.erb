@@ -1,0 +1,39 @@
+  <div class="sidebar">
+      <div class="sidebar_right_top">
+        <h3>Textos</h3>
+         <div class="latestnews">
+           <div class="latestnews_desc">
+              <h4>Vendas On-line</h4>
+              <p>Fazer com que suas vendas sejam pela internet hoje se tornou algo viável e quase que obrigatório para o sucesso financeiro e na divulgação de sua marca.</p>
+              <span><%= link_to 'Continue...', artigos_vendas_on_line_index_path %></span>
+           </div>
+               <div class="latestnews_desc">
+                  <h4>Cartão de visita</h4>
+                  <p>O cartão de visitas é uma excelente forma divulgar seus negócios e principalmente publicitar a você mesmo.</p>
+                  <span><%= link_to 'Saiba mais', artigos_cartao_visita_index_path %></span>
+              </div>
+              <div class="view-all"><%= link_to 'Textosw', artigos_index_path %></div>
+        </div>
+      </div>
+      <div class="sidebar_right_bottom">
+          <h3>Faça Aqui seu PEDIDO</h3>
+          <div class="login_form">
+            <%= render 'homes/form' %>
+              <!-- <form>
+               <div>
+                 <span><label>User Name</label></span>
+                 <span><input name="userName" type="text" class="textbox"></span>
+               </div>
+               <div>
+                 <span><label>Password</label></span>
+                 <span><input name="userName" type="password"></span>
+               </div>
+                <div>
+                   <span><input type="submit" class="mybutton" value="Submit"></span>
+                </div>
+                <span><a href="#">Forgot Password ?</a></span>
+            </form> -->
+          </div>
+       </div>
+     </div>
+  <div class="clear"></div>

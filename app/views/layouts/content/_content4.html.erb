@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+<div class="sidebar">
+    <div class="sidebar_left_top">
+       <div class="services" style="background-color: yellow;">
+          <h3>Mensagem recebida!</h3>
+              <div class="services_list">
+                  <ul>
+                      <li>
+                        <a href="#">Sr(a) <%= @home.nome %></a>
+                      </li>
+                      <li>
+                        <a href="#">Lhe retornaremos imediatamente!</a>
+                      </li><li>
+                        <a href="#">A Cruxhs acolhe o seu pedido!</a>
+                      </li>
+                  </ul><br><br>
+                    <%= link_to 'Outro Pedido?!', new_home_path, :class =>'submit_button2' %>
+            </div>
+      </div>
+  </div>
+</div>

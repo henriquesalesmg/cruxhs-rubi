@@ -1,0 +1,37 @@
+<%= form_for(@contato) do |f| %>
+  <% if @contato.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contato.errors.count, "error") %> prohibited this contato from being saved:</h2>
+
+      <ul>
+      <% @contato.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br>
+    <%= f.text_field :nome, placeholder: "Nome completo" %>
+  </div>
+  <div class="field">
+    <%= f.label :telefone, 'Celular' %><br>
+    <%= f.text_field :telefone, placeholder: "(wpp se possível)" %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :pedido %><br>
+    <%= f.select :pedido, ['Informação', 'WebSite', 'Sistemas Diversos', 'Aplicativo', 'Propagandas', 'Imagem/Criação', 'Video', 'Desenvolvimento', 'Documentação para MEI', 'Outros'] %>
+  </div>
+  <div class="field">
+    <%= f.label :mensagem %><br>
+    <%= f.text_area :mensagem %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Enviar', :class => 'submit_button' %>
+  </div>
+<% end %>
