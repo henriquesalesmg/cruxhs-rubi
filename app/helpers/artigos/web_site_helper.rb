@@ -1,0 +1,2 @@
+module Artigos::WebSiteHelper
+end

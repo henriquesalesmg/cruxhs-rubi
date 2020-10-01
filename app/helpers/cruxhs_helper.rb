@@ -1,0 +1,2 @@
+module CruxhsHelper
+end

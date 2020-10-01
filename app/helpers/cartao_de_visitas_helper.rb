@@ -1,0 +1,2 @@
+module CartaoDeVisitasHelper
+end
